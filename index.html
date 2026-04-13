@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; background: #e3f2fd; }
+    
+    /* 讓 iframe 鋪滿全螢幕並放在底層 */
+    iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      z-index: 1;
+    }
+
+    /* 讓畫布浮在上面，且「不擋住」滑鼠點擊 */
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      pointer-events: none; /* 這是操作網頁的關鍵 */
+    }
+  </style>
+</head>
+<body>
+  <iframe src="https://www.et.tku.edu.tw"></iframe>
+  <script src="sketch.js"></script>
+</body>
+</html>
